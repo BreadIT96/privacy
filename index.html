@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBudgy - Gestione Finanziaria Personale 100% Locale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #161b22;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --neon-green: #00e676;
+            --essential-yellow: #ffd700;
+            --superfluous-red: #ff3b30;
+            --border-color: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            background-color: rgba(0, 230, 118, 0.1);
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--neon-green);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 36px;
+            max-width: 650px;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--neon-green);
+            color: #000000;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 230, 118, 0.5);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            padding: 60px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            transition: border-color 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .tag-yellow { color: var(--essential-yellow); }
+        .tag-red { color: var(--superfluous-red); }
+        .tag-green { color: var(--neon-green); }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">SmartBudgy</a>
+        <nav class="nav-links">
+            <a href="#features">Caratteristiche</a>
+            <a href="https://breadit96.github.io/privacy/">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-badge">🔒 Privacy by Design • 100% Locale</div>
+        <h1>Prendi il controllo del tuo budget con <span>SmartBudgy</span></h1>
+        <p>L'app di gestione finanziaria personale semplice, essenziale e riservata. Nessun account cloud, nessuna sincronizzazione bancaria esterna: i tuoi dati restano solo sul tuo dispositivo.</p>
+        <a href="#" class="btn-download">
+            <span>Prossimamente su Google Play</span>
+        </a>
+    </section>
+
+    <section class="features" id="features">
+        <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3 class="feature-title">Privacy Assoluta</h3>
+            <p class="feature-desc">Tutte le transazioni, le categorie e i saldi vengono memorizzati esclusivamente nel database locale del tuo smartphone. Nessun server remoto.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">Analisi <span class="tag-yellow">Essenziale</span> / <span class="tag-red">Superfluo</span></h3>
+            <p class="feature-desc">Visualizza istantaneamente dove vanno le tue risorse grazie al grafico a torta interattivo. Tocca una fetta per filtrare le spese in tempo reale.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="feature-title">Interfaccia Neon & Fluidità</h3>
+            <p class="feature-desc">Design scuro ad alto contrasto per non affaticare la vista. Notifiche locali e risposta immediata senza tempi di caricamento online.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 SmartBudgy • Sviluppato da Alessio Cammarino</p>
+        <p style="margin-top: 8px;">
+            <a href="https://breadit96.github.io/privacy/">Informativa sulla Privacy</a> • 
+            Contatto: <a href="mailto:smartbudgy@gmail.com">smartbudgy@gmail.com</a>
+        </p>
+    </footer>
+
+</body>
+</html>
